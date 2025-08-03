@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>My Site</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body data-controller="adjust-navbar-padding">
+<div th:replace="~{layout/fragments/header :: header}"></div>
+
+<div data-adjust-navbar-padding-target="page">
+    <main layout:fragment="content"></main>
+</div>
+
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>
